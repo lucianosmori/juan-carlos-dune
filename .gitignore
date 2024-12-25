@@ -51,3 +51,6 @@ Thumbs.db
 # Visual Studio
 .vs/
 *.vsconfig
+
+# Unity layout files
+UserSettings/Layouts/*.dwlt
