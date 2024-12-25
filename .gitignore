@@ -26,3 +26,28 @@ ExportedObj/
 *.VC.db
 .idea/
 .vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
+*.user
+*.userosscache
+*.sublime-workspace
+
+# OSX
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Git credentials
+.git-credentials
+
+# Visual Studio
+.vs/
+*.vsconfig
