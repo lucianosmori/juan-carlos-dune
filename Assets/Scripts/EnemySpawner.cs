@@ -1,35 +1,38 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class EnemySpawner : MonoBehaviour
+namespace JuanCarlosDune.Scripts
 {
-    public GameObject enemyPrefab;
-    public float spawnInterval = 2f;
-    public Transform[] spawnPoints;
-    public int maxEnemies = 10;
-
-    private List<GameObject> enemies = new List<GameObject>();
-
-    void Start()
+    public class EnemySpawner : MonoBehaviour
     {
-        InvokeRepeating("SpawnEnemy", spawnInterval, spawnInterval);
-    }
+        public GameObject enemyPrefab;
+        public float spawnInterval = 2f;
+        public Transform[] spawnPoints;
+        public int maxEnemies = 10;
 
-    void SpawnEnemy()
-    {
-        if (enemies.Count >= maxEnemies)
+        private List<GameObject> enemies = new List<GameObject>();
+
+        void Start()
         {
-            return;
+            InvokeRepeating("SpawnEnemy", spawnInterval, spawnInterval);
         }
 
-        int spawnIndex = Random.Range(0, spawnPoints.Length);
-        GameObject newEnemy = Instantiate(enemyPrefab, spawnPoints[spawnIndex].position, Quaternion.identity);
-        enemies.Add(newEnemy);
-    }
+        void SpawnEnemy()
+        {
+            if (enemies.Count >= maxEnemies)
+            {
+                return;
+            }
 
-    void Update()
-    {
-        // Clean up destroyed enemies from the list
-        enemies.RemoveAll(enemy => enemy == null);
+            int spawnIndex = Random.Range(0, spawnPoints.Length);
+            GameObject newEnemy = Instantiate(enemyPrefab, spawnPoints[spawnIndex].position, Quaternion.identity);
+            enemies.Add(newEnemy);
+        }
+
+        void Update()
+        {
+            // Clean up destroyed enemies from the list
+            enemies.RemoveAll(enemy => enemy == null);
+        }
     }
 }
