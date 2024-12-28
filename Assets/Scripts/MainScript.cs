@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class MainScript : MonoBehaviour
+namespace JuanCarlosDune.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MainScript : MonoBehaviour
     {
-        Debug.Log("MainScript has started!");
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            Debug.Log("MainScript has started!");
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Add update logic here
-    }
+        // Update is called once per frame
+        void Update()
+        {
+            // Add update logic here
+        }
 
-    // OnGUI is called for rendering and handling GUI events
-    void OnGUI()
-    {
-        // Display "Hello, World!" at the top-left corner of the screen
-        GUI.Label(new Rect(10, 10, 100, 20), "Hello, World!");
+        // OnGUI is called for rendering and handling GUI events
+        void OnGUI()
+        {
+            // Display "Hello, World!" at the top-left corner of the screen
+            GUI.Label(new Rect(10, 10, 100, 20), "Hello, World!");
+        }
     }
 }
