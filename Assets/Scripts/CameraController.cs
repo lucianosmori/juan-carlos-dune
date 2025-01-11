@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
             transform.position = player.position + offset;
 
             // Rotate the camera to the desired angle
-            transform.rotation = Quaternion.Euler(angle, 0, 0);
+            transform.rotation = Quaternion.Euler(angle, 1, 0);
         }
     }
 }
