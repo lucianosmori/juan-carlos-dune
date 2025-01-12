@@ -14,6 +14,35 @@ This is a simple Unity project designed to demonstrate the basic structure and f
 
 - **Packages/**: Contains the package manifest and any additional packages used in the project.
 
+juan-carlos-dune
+├── Assets
+│   ├── Scripts
+│   │   ├── Controls
+│   │   │   └── ShipControls.cs
+│   │   ├── Navigation
+│   │   │   └── PlanetNavigation.cs
+│   │   ├── Events
+│   │   │   └── PlanetaryEvents.cs
+│   │   └── Resources
+│   │       └── ResourceManagement.cs
+│   ├── Scenes
+│   │   └── MainScene.unity
+│   ├── Prefabs
+│   ├── Materials
+│   ├── Textures
+│   └── Audio
+├── Tests
+│   ├── Controls
+│   │   └── ShipControlsTests.cs
+│   ├── Navigation
+│   │   └── PlanetNavigationTests.cs
+│   ├── Events
+│   │   └── PlanetaryEventsTests.cs
+│   └── Resources
+│       └── ResourceManagementTests.cs
+├── ProjectSettings
+└── README.md
+
 ## Setup Instructions
 1. Open the project in Unity.
 2. Navigate to the **Scenes** folder and open **MainScene.unity** to view the main scene.
